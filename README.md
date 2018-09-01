@@ -9,7 +9,9 @@ CC. 1035869245\
 \
 FIN\
 \
-\
+
+
+Lo siguiente es para yo leerlo.\\
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
