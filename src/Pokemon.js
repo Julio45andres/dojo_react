@@ -7,7 +7,7 @@ class Pokemon extends Component {
     }
 
     componentDidMount() {
-        const requestPokemonAwait = requestPokemonAwait = async () => {
+        const requestPokemonAwait = async () => {
             const response = await fetch(this.props.url)
             const pokemon_attrs = await response.json()
             this.setState({attributes: pokemon_attrs})
@@ -17,15 +17,31 @@ class Pokemon extends Component {
 
     render(){
         var imgURL = ''
+        var abilities = []
+        var moves = []
 
         if (this.state.attributes.id !== undefined){
-            imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.state.id}.png/`
+            imgURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.state.attributes.id}.png`
         }
+
+        if (this.state.attributes.abilities !== undefined) {
+            abilities = this.state.attributes.abilities.map((element, index) => 
+              <li key={index}>{element.ability.name}</li>
+            )
+          }
+      
+          if (this.state.attributes.moves !== undefined) {
+            moves = this.state.attributes.moves.slice(0, 4).map((element, index) =>
+              <li key={index}>{element.move.name}</li>
+            )
+          }
+      
+
         return (
             <div className="card pokemon">
     <div className="card-image">
         <figure className="image is-128x128">
-            <img src="" alt="pokemon" ></img>
+            <img src={imgURL} alt="pokemon" ></img>
         </figure>
      </div>
     
@@ -38,22 +54,22 @@ class Pokemon extends Component {
         <tbody>
           <tr>
             <td className="has-text-bold">Weight</td>
-            <td> </td>
+            <td>{this.state.attributes.weight} </td>
           </tr>
     
           <tr>
             <td className="has-text-bold">Height</td>
-            <td> </td>
+            <td>{this.state.attributes.height} </td>
           </tr>
     
           <tr>
             <td className="has-text-bold">Abilities</td>
-            <td>  </td>
+            <td> {abilities} </td>
           </tr>
     
           <tr>
             <td className="has-text-bold">Moves</td>
-            <td>  </td>
+            <td>{moves}  </td>
           </tr>
     
         </tbody>
@@ -74,3 +90,5 @@ class Pokemon extends Component {
     }
     
 }
+
+export default Pokemon
