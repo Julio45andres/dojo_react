@@ -1,14 +1,15 @@
 ## Dojo React js
 
-Desarrollo de Aplicaciones Empresariales
-UdeA
-2018-2
-
-Julián Andrés Muñoz Montoya - DoD
-CC. 1035869245
-
-FIN
-
+Desarrollo de Aplicaciones Empresariales\
+UdeA\
+2018-2\
+\
+Julián Andrés Muñoz Montoya - DoD\
+CC. 1035869245\
+\
+FIN\
+\
+\
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
