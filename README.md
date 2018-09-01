@@ -1,3 +1,16 @@
+Dojo_vue
+Dojo en vue.js
+
+Desarrollo de Aplicaciones Empresariales
+UdeA
+2018-2
+
+Julián Andrés Muñoz Montoya - DoD
+CC. 1035869245
+
+FIN
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
